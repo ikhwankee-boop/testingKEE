@@ -1,0 +1,1415 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #2e7d32;
+    --secondary-green: #4caf50;
+    --light-green: #e8f5e9;
+    --dark-green: #1b5e20;
+    --gold: #ffd700;
+    --light-gold: #fff9c4;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --gray: #757575;
+    --dark-gray: #424242;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    
+    /* Warna Signal/Warning Baru */
+    --signal-red: #dc2626;
+    --signal-orange: #ea580c;
+    --signal-yellow: #ca8a04;
+    --signal-blue: #2563eb;
+    --signal-green: #16a34a;
+    
+    /* Gradient untuk efek lebih menarik */
+    --gradient-red: linear-gradient(135deg, #dc2626, #ef4444);
+    --gradient-orange: linear-gradient(135deg, #ea580c, #f97316);
+    --gradient-yellow: linear-gradient(135deg, #ca8a04, #eab308);
+    
+    /* 🌈 Warna Blue Sky & Variants */
+    --sky-blue: #87ceeb;
+    --light-sky-blue: #87cefa;
+    --deep-sky-blue: #00bfff;
+    --powder-blue: #b0e0e6;
+    --baby-blue: #89cff0;
+    --azure-blue: #007fff;
+    --cornflower-blue: #6495ed;
+    
+    /* Blue Sky Gradients */
+    --gradient-sky: linear-gradient(135deg, #87ceeb, #00bfff);
+    --gradient-ocean: linear-gradient(135deg, #00bfff, #1e90ff);
+    --gradient-morning: linear-gradient(135deg, #87cefa, #4682b4);
+    
+    /* 🎨 Transparent Variables */
+    --transparent: transparent;
+    --transparent-white-10: rgba(255, 255, 255, 0.1);
+    --transparent-white-20: rgba(255, 255, 255, 0.2);
+    --transparent-white-30: rgba(255, 255, 255, 0.3);
+    --transparent-white-40: rgba(255, 255, 255, 0.4);
+    --transparent-white-50: rgba(255, 255, 255, 0.5);
+    --transparent-white-60: rgba(255, 255, 255, 0.6);
+    --transparent-white-70: rgba(255, 255, 255, 0.7);
+    --transparent-white-80: rgba(255, 255, 255, 0.8);
+    --transparent-white-90: rgba(255, 255, 255, 0.9);
+    
+    --transparent-black-10: rgba(0, 0, 0, 0.1);
+    --transparent-black-20: rgba(0, 0, 0, 0.2);
+    --transparent-black-30: rgba(0, 0, 0, 0.3);
+    --transparent-black-40: rgba(0, 0, 0, 0.4);
+    --transparent-black-50: rgba(0, 0, 0, 0.5);
+    --transparent-black-60: rgba(0, 0, 0, 0.6);
+    --transparent-black-70: rgba(0, 0, 0, 0.7);
+    --transparent-black-80: rgba(0, 0, 0, 0.8);
+    --transparent-black-90: rgba(0, 0, 0, 0.9);
+    
+    --transparent-sky-10: rgba(135, 206, 235, 0.1);
+    --transparent-sky-20: rgba(135, 206, 235, 0.2);
+    --transparent-sky-30: rgba(135, 206, 235, 0.3);
+    --transparent-sky-40: rgba(135, 206, 235, 0.4);
+    --transparent-sky-50: rgba(135, 206, 235, 0.5);
+    
+    --transparent-gold-10: rgba(255, 215, 0, 0.1);
+    --transparent-gold-20: rgba(255, 215, 0, 0.2);
+    --transparent-gold-30: rgba(255, 215, 0, 0.3);
+    --transparent-gold-40: rgba(255, 215, 0, 0.4);
+    --transparent-gold-50: rgba(255, 215, 0, 0.5);
+    
+    --transparent-green-10: rgba(46, 125, 50, 0.1);
+    --transparent-green-20: rgba(46, 125, 50, 0.2);
+    --transparent-green-30: rgba(46, 125, 50, 0.3);
+    --transparent-green-40: rgba(46, 125, 50, 0.4);
+    --transparent-green-50: rgba(46, 125, 50, 0.5);
+	
+	 /* Transparent Kuning Penang */
+    --transparent-penang-10: rgba(253, 225, 0, 0.1);
+    --transparent-penang-20: rgba(253, 225, 0, 0.2);
+    --transparent-penang-30: rgba(253, 225, 0, 0.3);
+    --transparent-penang-40: rgba(253, 225, 0, 0.4);
+    --transparent-penang-50: rgba(253, 225, 0, 0.5);
+	
+	/* 🟡 WARNA BENDERA PULAU PINANG - Kuning */
+    --penang-yellow: #FDE100;          /* Kuning terang bendera Penang */
+    --penang-yellow-dark: #FFC400;     /* Kuning gelap sedikit */
+    --penang-yellow-light: #FFEB3B;    /* Kuning cerah */
+    --penang-yellow-pale: #FFF9C4;     /* Kuning pucat */
+    
+    /* Gradients Kuning Penang */
+    --gradient-penang: linear-gradient(135deg, #FDE100, #FFC400);
+    --gradient-penang-gold: linear-gradient(135deg, #FFC400, #FFA000);
+    --gradient-penang-sunshine: linear-gradient(135deg, #FFEB3B, #FDE100);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Compact */
+.header {
+    background:  #2e7d32;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    background: transparent;
+    padding: 10px 0;
+}
+
+.logo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Untuk 3 logo dalam row yang kemas */
+.logo-compact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    max-width: 90px;
+    object-fit: contain;
+}
+
+/* Space antara logo terakhir dengan text */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 15px;
+    border-left: 1px solid var(--light-gray);
+    padding-left: 15px;
+}
+
+.logo-title {
+    font-weight: bold;
+    color: var(--dark-green);
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.logo-subtitle {
+    color: var(--primary-green);
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #ffffff;
+    border-bottom: rgba(135, 206, 235, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: relative;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    flex: 1;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 0;
+    position: relative;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-green);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-green);
+}
+
+/* Language Switcher Styles */
+.language-switcher {
+    margin-left: auto;
+    order: 2;
+}
+
+.language-select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.language-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-green);
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.language-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+    font-size: 0.8rem;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.language-select {
+    padding: 10px 40px 10px 35px;
+    border: 2px solid var(--light-gray);
+    border-radius: 25px;
+    background: var(--white);
+    color: var(--dark-gray);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 120px;
+    position: relative;
+    z-index: 1;
+}
+
+.language-select:hover {
+    border-color: var(--primary-green);
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
+    transform: translateY(-1px);
+}
+
+.language-select:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--dark-gray);
+    transition: var(--transition);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 180px;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--dark-gray);
+    transition: var(--transition);
+    font-size: 0.85rem;
+}
+
+.dropdown-menu a:hover {
+    background: var(--light-green);
+    color: var(--primary-green);
+}
+
+/* Mobile responsive updates */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+    }
+    
+    .nav-menu {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid var(--light-gray);
+    }
+    
+    .nav-link {
+        padding: 15px 20px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .language-switcher {
+        order: 1;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+    
+    .hamburger {
+        display: flex;
+        order: 2;
+    }
+    
+    /* Logo responsive */
+    .logo-compact {
+        padding: 8px 15px;
+        gap: 10px;
+    }
+    
+    .logo-img {
+        height: 35px;
+        max-width: 70px;
+    }
+    
+    .logo-text {
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+    
+    .logo-title {
+        font-size: 1rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .language-select {
+        padding: 8px 35px 8px 30px;
+        font-size: 0.8rem;
+        min-width: 110px;
+    }
+    
+    .language-icon {
+        font-size: 0.9rem;
+        left: 10px;
+    }
+    
+    .language-arrow {
+        font-size: 0.7rem;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-compact {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .logo-img {
+        height: 30px;
+        max-width: 60px;
+    }
+    
+    .logo-text {
+        border-left: none;
+        margin-left: 0;
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+        margin-top: 5px;
+    }
+    
+    .language-switcher {
+        margin-right: 10px;
+    }
+    
+    .language-select {
+        min-width: 100px;
+        padding: 6px 30px 6px 28px;
+    }
+    
+    .language-icon {
+        left: 8px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Welcome Section - With Background Image */
+.welcome-section {
+    background: url('../assets/images/komtar.jpeg') center/cover no-repeat;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><path fill="%23ffffff" d="M500,250c138.07,0,250,111.93,250,250s-111.93,250-250,250s-250-111.93-250-250S361.93,250,500,250z"/></svg>') repeat;
+    opacity: 0.3;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-text {
+    flex: 1;
+    color: var(--white);
+}
+
+.welcome-text h1 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-description {
+    font-size: 1.3rem;
+    color: var(--light-green);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.welcome-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--gold);
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.welcome-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder {
+    width: 400px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.welcome-real-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: var(--transition);
+}
+
+.image-placeholder:hover {
+    transform: scale(1.05);
+    border-color: var(--gold);
+}
+
+.image-placeholder:hover .welcome-real-image {
+    transform: scale(1.1);
+}
+
+/* CTA Buttons */
+.welcome-actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-welcome-primary {
+    background: var(--gold);
+    color: var(--dark-green);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.btn-welcome-primary:hover {
+    background: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
+}
+
+.btn-welcome-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 15px 30px;
+    border: 2px solid var(--white);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.btn-welcome-secondary:hover {
+    background: var(--white);
+    color: var(--primary-green);
+    transform: translateY(-3px);
+}
+
+/* Fallback untuk gambar yang tak wujud */
+.welcome-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    z-index: 1;
+}
+
+.welcome-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Design untuk Welcome Section */
+@media (max-width: 968px) {
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .welcome-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .welcome-stats {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .image-placeholder {
+        width: 300px;
+        height: 250px;
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-section {
+        padding: 60px 0;
+    }
+    
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+    
+    .welcome-description {
+        font-size: 1.1rem;
+    }
+    
+    .welcome-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .stat-item {
+        padding: 15px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .welcome-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-welcome-primary,
+    .btn-welcome-secondary {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+    
+    .image-placeholder {
+        width: 250px;
+        height: 200px;
+        font-size: 3rem;
+    }
+}
+
+/* 🌟 NEWS SECTION */
+.news-section {
+    padding: 100px 0;
+    background: url('../assets/images/farmerpublic.jpeg') fixed center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🌊 FLOATING PARTICLE EFFECT */
+.news-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><circle cx="50" cy="50" r="2" fill="%23ffffff"/></svg>') repeat;
+    animation: floatParticles 20s linear infinite;
+}
+
+@keyframes floatParticles {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
+}
+
+/* 🎯 SECTION HEADER STYLING */
+.news-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.news-section .section-header h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.view-all {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    padding: 12px 24px;
+    background: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.view-all:hover {
+    color: var(--white);
+    background: #ca8a04;
+    gap: 15px;
+    transform: translateY(-2px);
+}
+
+/* 🌟 ENHANCED NEWS SLIDER STYLES */
+.news-slider-container {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 25px;
+    max-width: 900px;
+}
+
+.news-slider {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 2;
+    height: 480px;
+}
+
+.news-slide {
+    min-width: 100%;
+    transition: all 0.5s ease;
+    opacity: 0.7;
+    transform: scale(0.95);
+    filter: blur(1px);
+    padding: 0 10px;
+}
+
+.news-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+/* Enhanced News Card untuk Slide Lebar */
+.news-slide .news-card {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 150%;
+    height: 120%;
+    transform: none;
+    animation: none;
+    display: flex;
+    flex-direction: column;
+    background: #424242;
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Gambar Penuh & Lebar */
+.news-slide .news-image {
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.news-slide .news-real-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(0.8) contrast(1.1);
+}
+
+.news-slide.active .news-card:hover .news-real-image {
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.05);
+}
+
+/* Content area yang lebih seimbang */
+.news-slide .news-content {
+    padding: 35px 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px;
+}
+
+.news-slide .news-content h3 {
+    color: var(--white);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.news-slide .news-content p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+/* Badge yang lebih menonjol */
+.news-slide .news-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--signal-green);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    z-index: 3;
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4); }
+    50% { box-shadow: 0 5px 25px rgba(46, 125, 50, 0.8), 0 0 30px rgba(46, 125, 50, 0.6); }
+}
+
+.news-badge[data-translate="badge_important"] {
+    background: var(--gradient-red);
+    animation: pulseGlowRed 2s infinite;
+}
+
+@keyframes pulseGlowRed {
+    0%, 100% { box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4); }
+    50% { box-shadow: 0 5px 25px rgba(255, 107, 107, 0.8), 0 0 30px rgba(255, 107, 107, 0.6); }
+}
+
+/* Meta info lebih teratur */
+.news-slide .news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.news-slide .news-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Read More button lebih menarik */
+.news-slide .read-more {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 215, 0, 0.15);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+}
+
+.news-slide .read-more:hover {
+    color: var(--white);
+    background: rgba(255, 215, 0, 0.3);
+    gap: 12px;
+    transform: translateX(5px);
+}
+
+/* Navigation yang lebih besar */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 120px;
+    position: relative;
+    z-index: 3;
+}
+
+.slider-prev,
+.slider-next {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: var(--gold);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    font-size: 1.5rem;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background: var(--gold);
+    color: var(--dark-green);
+    transform: scale(1.1);
+    border-color: var(--gold);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Dots yang lebih besar */
+.slider-dots {
+    display: flex;
+    gap: 15px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.dot.active {
+    background: #f5f5f5;
+    transform: scale(1.3);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+/* Gradient overlay untuk gambar untuk text lebih jelas */
+.news-slide .news-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+}
+
+/* Responsive Design untuk News Section */
+@media (max-width: 968px) {
+    .news-slider-container {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    
+    .news-slider {
+        height: 550px;
+    }
+    
+    .news-slide .news-image {
+        height: 300px;
+    }
+    
+    .news-slide .news-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-section {
+        padding: 60px 0;
+        background-attachment: scroll;
+    }
+    
+    .news-slider-container {
+        max-width: 100%;
+        margin: 0 -10px;
+        border-radius: 20px;
+    }
+    
+    .news-slider {
+        height: 500px;
+    }
+    
+    .news-slide {
+        padding: 0 5px;
+    }
+    
+    .news-slide .news-image {
+        height: 250px;
+    }
+    
+    .news-slide .news-content {
+        padding: 25px 20px;
+        min-height: 220px;
+    }
+    
+    .news-slide .news-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .slider-nav {
+        gap: 25px;
+    }
+    
+    .slider-prev,
+    .slider-next {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .dot {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-slider {
+        height: 450px;
+    }
+    
+    .news-slide .news-image {
+        height: 200px;
+    }
+    
+    .news-slide .news-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .news-slide .news-content p {
+        font-size: 0.9rem;
+    }
+    
+    .slider-nav {
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .slider-prev,
+    .slider-next {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .slider-dots {
+        gap: 12px;
+    }
+    
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Services Section */
+.services-section {
+    padding: 100px 0;
+    background: url('../assets/images/try3.jpeg') fixed center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating particles effect */
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><circle cx="50" cy="50" r="2" fill="%23ffffff"/></svg>') repeat;
+    animation: floatParticles 20s linear infinite;
+}
+
+/* Section Header */
+.services-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.services-section .section-header h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.services-section .section-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-align: right;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-card {
+    background: #424242;
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 40px 30px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+}
+
+.service-images {
+    height: 200px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.service-real-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-real-image {
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    color: var(--white);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Service Arrow */
+.service-arrow {
+    color: var(--gold);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.service-card:hover .service-arrow {
+    color: var(--white);
+    background: rgba(255, 215, 0, 0.3);
+    gap: 12px;
+    transform: translateX(5px);
+}
+
+/* Responsive Design untuk Services */
+@media (max-width: 968px) {
+    .services-section .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .services-section .section-header p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 60px 0;
+        background-attachment: scroll;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+    
+    .services-section .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .service-images {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-images {
+        height: 160px;
+    }
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-gray);
+    color: var(--white);
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h4 {
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-info p,
+.operation-hours p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.contact-info i,
+.operation-hours i {
+    color: var(--gold);
+    margin-top: 3px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray);
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design untuk Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .contact-info p,
+    .operation-hours p {
+        justify-content: center;
+    }
+}

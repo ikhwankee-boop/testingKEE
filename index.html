@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jabatan Pertanian Negeri Pulau Pinang</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Compact -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-container">
+                <div class="logo-compact">
+                    <!-- Logo 1 -->
+                    <img src="assets/images/logopertanian.jpeg" alt="Jabatan Pertanian" class="logo-img">
+                    
+                    <!-- Logo 2 -->
+                    <img src="assets/images/download.jpeg" alt="Logo Kerajaan" class="logo-img">
+                    
+                    <!-- Logo 3 -->
+                    <img src="assets/images/logo2.jpeg" alt="Logo Negeri" class="logo-img">
+                    
+                    <div class="logo-text">
+                        <span class="logo-title">Jabatan Pertanian</span>
+                        <span class="logo-subtitle">Negeri Pulau Pinang</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" data-translate="nav_home"class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span data-translate="nav_home">Utama</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-translate="nav_info">Info Jabatan <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="infojabatan/sejarah/index.html" data-translate="nav_history">Sejarah</a></li>
+                            <li><a href="infojabatan/visimisi/index.html" data-translate="nav_vision">Visi & Misi</a></li>
+                            <li><a href="infojabatan/cartaorganisasi/index.html" data-translate="nav_org">Carta Organisasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-translate="nav_services">Perkhidmatan <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="perkhidmatan/permohonan_lesen" data-translate="nav_license">Permohonan Lesen</a></li>
+                            <li><a href="perkhidmatan/konsultasi/index.html" data-translate="nav_consult">Konsultasi</a></li>
+                            <li><a href="perkhidmatan/bantuan_pertanian/index.html" data-translate="nav_aid">Bantuan Pertanian</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-translate="nav_contact">Hubungi Kami</a>
+                    </li>
+                </ul>
+
+                <!-- Language Translator -->
+                <div class="language-switcher">
+                    <div class="language-select-wrapper">
+                        <i class="fas fa-globe language-icon"></i>
+                        <select id="languageSelect" class="language-select">
+                            <option value="ms">🇲🇾 BM</option>
+                            <option value="en">🇺🇸 EN</option>
+                            <option value="zh">🇨🇳 中文</option>
+                            <option value="ta">🇮🇳 தமிழ்</option>
+                        </select>
+                        <i class="fas fa-chevron-down language-arrow"></i>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div> <!-- Tutup nav-container -->
+        </nav> <!-- Tutup navbar -->
+    </header> <!-- Tutup header -->
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Enhanced Welcome Section -->
+        <section class="welcome-section">
+            <div class="container">
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <h1 data-translate="welcome_title">Selamat Datang ke Portal Rasmi Jabatan Pertanian Negeri Pulau Pinang</h1>
+                        <p class="welcome-description" data-translate="welcome_desc">
+                            Memacu Pertanian Moden & Mampan untuk Masa Depan yang Lebih Hijau dan Produktif
+                        </p>
+                        
+                        <div class="welcome-actions">
+                            <a href="#services" class="btn-welcome-primary">
+                                <i class="fas fa-seedling"></i>
+                                Terokai Perkhidmatan
+                            </a>
+                            <a href="https://www.doa.gov.my/index.php/pages/view/1053" class="btn-welcome-secondary">
+                                Portal Rasmi Kerajaan
+                            </a>
+                        </div>
+                        
+                        <div class="welcome-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Program Pertanian</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15K+</span>
+                                <span class="stat-label">Petani Berdaftar</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">35+</span>
+                                <span class="stat-label">Tahun Berkhidmat</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-image">
+    <div class="image-placeholder">
+        <img src="assets/images/ttuuoo.jpeg" alt="Tractor Pertanian" class="welcome-real-image">
+    </div>
+</div>
+
+                </div>
+            </div>
+        </section>
+
+<!-- Gantikan bahagian news slider dengan yang ini -->
+<section class="news-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 data-translate="news_title">Berita & Pengumuman</h2>
+            <a href="https://www.doa.gov.my/index.php/announcements/all/1" class="view-all" data-translate="view_all">
+                Lihat Semua <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <!-- Enhanced News Slider Container -->
+        <div class="news-slider-container">
+            <div class="news-slider">
+                <!-- Slide 1 - Gambar Penuh -->
+                <div class="news-slide active">
+                    <div class="news-card">
+                        <div class="news-badge" data-translate="badge_new">TERKINI</div>
+                        <div class="news-image">
+                            <img src="assets/images/gambarberita.png" alt="Program Bantuan Pertanian" class="news-real-image">
+                        </div>
+                        <div class="news-content">
+                            <div>
+                                <h3 data-translate="news1_title">Program Bantuan Pertanian 2024</h3>
+                                <p data-translate="news1_desc">Permohonan untuk Program Bantuan Pertanian 2024 kini dibuka kepada semua petani berdaftar. Dapatkan maklumat lanjut mengenai syarat dan cara permohonan.</p>
+                            </div>
+                            <div class="news-meta">
+                                <span><i class="far fa-calendar"></i> <span data-translate="news1_date">15 Mac 2024</span></span>
+                                <a href="https://www.hmetro.com.my/agro/2025/10/1274713/rm400-juta-untuk-18-projek-atasi-isu-air-sektor-pertanian" class="read-more" data-translate="read_more">
+                                    Baca Selanjutnya <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 - Gambar Penuh -->
+                <div class="news-slide">
+                    <div class="news-card">
+                        <div class="news-badge" data-translate="badge_important">PENTING</div>
+                        <div class="news-image">
+                            <img src="assets/images/meme.jpeg" alt="Teknologi IoT Dalam Pertanian" class="news-real-image">
+                        </div>
+                        <div class="news-content">
+                            <div>
+                                <h3 data-translate="news2_title">Teknologi IoT Dalam Pertanian</h3>
+                                <p data-translate="news2_desc">Pengenalan teknologi IoT mengubah landskap pertanian tradisional kepada pertanian pintar. Ketahui bagaimana teknologi ini boleh meningkatkan hasil dan kecekapan.</p>
+                            </div>
+                            <div class="news-meta">
+                                <span><i class="far fa-calendar"></i> <span data-translate="news2_date">10 Mac 2024</span></span>
+                                <a href="#" class="read-more" data-translate="read_more">
+                                    Baca Selanjutnya <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 - Gambar Penuh -->
+                <div class="news-slide">
+                    <div class="news-card">
+                        <div class="news-badge" data-translate="badge_new">BAHARU</div>
+                        <div class="news-image">
+                            <img src="assets/images/download3.jpeg" alt="Kerjasama Strategik Dengan Universiti" class="news-real-image">
+                        </div>
+                        <div class="news-content">
+                            <div>
+                                <h3 data-translate="news3_title">Kerjasama Strategik Dengan Universiti</h3>
+                                <p data-translate="news3_desc">Jabatan bekerjasama dengan universiti tempatan untuk penyelidikan pertanian. Kolaborasi ini menjanjikan inovasi baharu dalam sektor pertanian moden.</p>
+                            </div>
+                            <div class="news-meta">
+                                <span><i class="far fa-calendar"></i> <span data-translate="news3_date">5 Mac 2024</span></span>
+                                <a href="#" class="read-more" data-translate="read_more">
+                                    Baca Selanjutnya <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Slider Navigation -->
+            <div class="slider-nav">
+                <button class="slider-prev" aria-label="Slide sebelumnya">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="slider-next" aria-label="Slide seterusnya">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Perkhidmatan Section -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="services_title">Perkhidmatan Kami</h2>
+                    <p data-translate="services_desc">Kami menyediakan pelbagai perkhidmatan untuk memenuhi keperluan pertanian anda</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Card 1 -->
+                    <a href="khidmatnasihat/index.html" class="service-card" data-service="khidmat-nasihat">
+                        <div class="service-images">
+                            <img src="assets/images/advisory.jpeg" alt="Khidmat Nasihat & Teknikal" class="service-real-image">
+                        </div>
+                        <h3 data-translate="service1_title">Khidmat Nasihat & Teknikal</h3>
+                        <p data-translate="service1_desc">Perkhidmatan nasihat teknikal untuk petani dan pengusaha pertanian</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="lesen/index.html" class="service-card" data-service="lesen-permit">
+                        <div class="service-images">
+                            <img src="assets/images/advisory.jpeg" alt="Khidmat Nasihat & Teknikal" class="service-real-image">
+                        </div>
+                        <h3 data-translate="service2_title">Lesen & Permit</h3>
+                        <p data-translate="service2_desc">Permohonan lesen dan permit untuk aktiviti pertanian dan perniagaan berkaitan</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="perkhidmatanatastalian/index.html" class="service-card" data-service="perkhidmatan-atas-talian">
+                        <div class="service-images">
+                            <img src="assets/images/advisory.jpeg" alt="Khidmat Nasihat & Teknikal" class="service-real-image">
+                        </div>
+                        <h3 data-translate="service3_title">Perkhidmatan Atas Talian</h3>
+                        <p data-translate="service3_desc">Akses kepada sistem dan perkhidmatan dalam talian</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Card 4 -->
+                    <a href="kursuslatihan/index.html" class="service-card" data-service="kursus-latihan">
+                        <div class="service-images">
+                            <img src="assets/images/advisory.jpeg" alt="Khidmat Nasihat & Teknikal" class="service-real-image">
+                        </div>
+                        <h3 data-translate="service4_title">Kursus & Latihan</h3>
+                        <p data-translate="service4_desc">Program latihan dan kursus untuk meningkatkan kemahiran dalam bidang pertanian</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Card 5 -->
+                    <a href="skimsijil/index.html" class="service-card" data-service="skim-sijil">
+                        <div class="service-images">
+                            <img src="assets/images/advisory.jpeg" alt="Khidmat Nasihat & Teknikal" class="service-real-image">
+                        </div>
+                        <h3 data-translate="service5_title">Skim Sijil</h3>
+                        <p data-translate="service5_desc">Pensijilan produk pertanian dan ladang mengikut piawaian yang ditetapkan</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Card 6 -->
+                    <a href="bantuan-sokongan.html" class="service-card" data-service="bantuan-sokongan">
+                       <div class="service-images">
+                            <img src="assets/images/advisory.jpeg" alt="Khidmat Nasihat & Teknikal" class="service-real-image">
+                        </div>
+                        <h3 data-translate="service6_title">Bantuan & Sokongan</h3>
+                        <p data-translate="service6_desc">Program bantuan kewangan dan sokongan untuk petani</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-translate="contact_title">Hubungi Kami</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-translate="contact_address">Jalan Sultan Azlan Shah, 11900 Bayan Lepas, Pulau Pinang</span></p>
+                        <p><i class="fas fa-phone"></i> +60 4-636 4866</p>
+                        <p><i class="fas fa-envelope"></i> info@pertanianpenang.gov.my</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="hours_title">Waktu Operasi</h4>
+                    <div class="operation-hours">
+                        <p data-translate="hours1">Isnin - Khamis: 8:00 PG - 5:00 PTG</p>
+                        <p data-translate="hours2">Jumaat: 8:00 PG - 12:15 PTG, 2:45 PTG - 5:00 PTG</p>
+                        <p data-translate="hours3">Sabtu & Ahad: Tutup</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="links_title">Pautan Pantas</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-translate="link_portal">Portal Kerajaan</a></li>
+                        <li><a href="#" data-translate="link_privacy">Dasar Privasi</a></li>
+                        <li><a href="#" data-translate="link_disclaimer">Penafian</a></li>
+                        <li><a href="#" data-translate="link_sitemap">Peta Laman</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jabatan Pertanian Negeri Pulau Pinang. <span data-translate="footer_rights">Hak Cipta Terpelihara.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
